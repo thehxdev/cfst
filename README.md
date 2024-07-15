@@ -1,6 +1,7 @@
 # CFST
 This project is a fork of [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest).
-You can find Cloudflare IP list (Both v4 and v6) on [ips](https://www.cloudflare.com/ips) page of Cloudflare website.
+
+You can find Cloudflare IP ranges list (Both v4 and v6) on [cloudflare.com/ips](https://www.cloudflare.com/ips) page.
 
 ### What is different from original version?
 - Translated to English

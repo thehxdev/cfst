@@ -158,6 +158,6 @@ func (p *Ping) tcpingHandler(ip *net.IPAddr) {
 		Received: recv,
 		Delay:    totalDlay / time.Duration(recv),
 	}
-	p.buff.WriteString(ip.String()+"\n")
+	p.buff.WriteString(ip.String() + "\n")
 	p.appendIPData(data)
 }

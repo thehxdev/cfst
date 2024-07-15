@@ -64,9 +64,6 @@ Usage:
     -sl 5
         Download speed limit (default 0.00 mb/s)
 
-    -p 10
-        Number of direcly displayed results after speed measurement (default 10)
-
     -write-ips
         Write the IPs that passed the ping test (default empty)
 
@@ -111,7 +108,6 @@ Usage:
 	flag.Float64Var(&maxLossRate, "tlr", 1, "")
 	flag.Float64Var(&task.MinSpeed, "sl", 0, "")
 
-	flag.IntVar(&utils.PrintNum, "p", 10, "")
 	flag.StringVar(&task.IPFile, "f", "ip.txt", "")
 	flag.StringVar(&task.IPText, "ip", "", "")
 	flag.StringVar(&utils.Output, "o", "result.csv", "")
@@ -147,15 +143,12 @@ func main() {
 	speedData := task.TestDownloadSpeed(pingData)
 
 	utils.ExportCsv(speedData)
-	speedData.Print()
+	// speedData.Print()
 
 	endPrint()
 }
 
 func endPrint() {
-	if utils.NoPrintResult() {
-		return
-	}
 	if runtime.GOOS == "windows" {
 		fmt.Printf("Press the Enter or Ctrl+C to exit...")
 		fmt.Scanln()

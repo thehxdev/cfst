@@ -69,9 +69,9 @@ func (p *Ping) Run() utils.PingDelaySet {
 	}
 
 	if Httping {
-		fmt.Printf("Start HTTPING test (Port: %d, Delay range: %v ~ %v ms, Packed loss: %.2f)\n", TCPPort, utils.InputMinDelay.Milliseconds(), utils.InputMaxDelay.Milliseconds(), utils.InputMaxLossRate)
+		fmt.Printf("Start HTTPING test (Port: %d, Delay range: %v ~ %v ms, Packet loss: %.2f)\n", TCPPort, utils.InputMinDelay.Milliseconds(), utils.InputMaxDelay.Milliseconds(), utils.InputMaxLossRate)
 	} else {
-		fmt.Printf("Start TCPING test (Port: %d, Delay range: %v ~ %v ms, Packed loss: %.2f)\n", TCPPort, utils.InputMinDelay.Milliseconds(), utils.InputMaxDelay.Milliseconds(), utils.InputMaxLossRate)
+		fmt.Printf("Start TCPING test (Port: %d, Delay range: %v ~ %v ms, Packet loss: %.2f)\n", TCPPort, utils.InputMinDelay.Milliseconds(), utils.InputMaxDelay.Milliseconds(), utils.InputMaxLossRate)
 	}
 
 	for _, ip := range p.ips {

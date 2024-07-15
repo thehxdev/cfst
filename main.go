@@ -26,31 +26,28 @@ Usage:
         It's recommended to set [-n] value to 10% of your total IPs.
 
     -t 4
-        The number of times of a single IP delay speed measurement (4 default)
+        Number of packets sent to a single IP address for ping test (default 4)
 
     -dn 10
-        Maximum returned IPs after speed measurement and sorting operation (default 10)
+        Maximum returned IPs after speed test and sorting operation (default 10)
 
     -dt 10
-        The longest time to download a single IP (default 10 seconds)
+        The longest time to download from a single IP (default 10 seconds)
 
     -tp 443
         Target port (default port 443)
 
     -url https://speed.cloudflare.com/__down?bytes=500000000
-        Speed measurement address (Download speed test)
+        Speed test address (Download speed test)
 
     -httping
-        Change speed measurement mode to the HTTP protocol. the test address used is the [-url] parameter.
+        Change ping test mode to the HTTP protocol (default false)
 
     -httping-url https://speed.cloudflare.com/
         Httping measurement address
 
     -httping-code 200
         HTTP status code returned by the webpage (default 200 301 302)
-
-    -cfcolo HKG,KHH,NRT,LAX,SEA,SJC,FRA,MAD (Removed)
-        Matching the designated area. The region is the local airport three-character code (default all areas)
 
     -tl 200
         The average delay upper limit (default 9999 ms)
@@ -77,7 +74,7 @@ Usage:
         Path to output file (default result.csv)
 
     -dd
-        Disable download speed measurement. IPs will be sorted by delay (default false)
+        Disable download speed test. IPs will be sorted by ping test (default false)
 
     -allip
         Check all IP addresses (Only IPv4) in the IP segments. Default behavior is choose a random IP in each /24 range.

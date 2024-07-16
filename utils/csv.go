@@ -41,7 +41,6 @@ type CloudflareIPData struct {
 	DownloadSpeed float64
 }
 
-// 计算丢包率
 func (cf *CloudflareIPData) getLossRate() float32 {
 	if cf.lossRate == 0 {
 		pingLost := cf.Sended - cf.Received
